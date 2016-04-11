@@ -1,0 +1,240 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style_NewUI.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#termsModal').modal('show');
+    });
+</script>
+</head>
+<!-- TERMS MODAL  -->
+<div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Terms &amp; Conditions</h4>
+      </div>
+      <div class="modal-body">
+        <p class="termHead">Terms &amp; Conditions Entry Notice</p>
+        <p>The enLabel eIFU website provides you with Instructions for Use (IFU) and other related information for various products from enLabel Global Services.</p>
+		<p><b>WARNING NOTICE:</b> The actual or attempted unauthorized access, use or modification of the web site and its contents is strictly prohibited. Unauthorized users and/or unauthorized use are subject to criminal and/or civil penalties in accordance with applicable domestic and foreign laws. The use of this web site may be monitored and recorded for administrative and security reasons.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- SIGN-IN MODAL  -->
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog model-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sign In</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label class="control-label">Username:</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Password:</label>
+            <input type="text" class="form-control" id="password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- ADVANCED SEARCH MODAL  -->
+<div class="modal fade" id="advSearch" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog model-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sign In</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        	<div class="row">
+	        	<div class="form-group">
+	        		<label class="control-label col-md-12">Franchise Legal Entity Name:</label>
+	            	<input type="text" class="form-control" id="legalName">
+	        	</div>
+      		</div>
+          	<div class="row">
+          		<div class="form-group col-md-4">
+            		<label class="control-label">Product Family:</label>
+            		<input type="text" class="form-control" id="ProdFamily">
+          		</div>
+          		<div class="form-group col-md-4">
+            		<label class="control-label">Product Name:</label>
+            		<input type="text" class="form-control" id="prodName">
+          		</div>
+          		<div class="form-group col-md-4">
+            		<label class="control-label">Product Codes:</label>
+            		<input type="text" class="form-control" id="prodCode">
+          		</div>
+          	</div>
+          	<div class="row">
+          		<div class="form-group col-md-4">
+            		<label class="control-label">Revision/Version:</label>
+            		<input type="text" class="form-control" id="version">
+          		</div>
+          		<div class="form-group col-md-4">
+            		<label class="control-label">Release Date:</label>
+            		<input type="text" class="form-control" id="ReleaseDate">
+          		</div>
+          		<div class="form-group col-md-4">
+            		<label class="control-label">Date Published:</label>
+            		<input type="text" class="form-control" id="DatePub">
+          		</div>
+      		</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Search</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="header" class="container">
+	<div id="docheaderdiv" class="row">
+		<div id="logo"><img src="img/eIFU_logo_wht.png"></div>
+		<div id="search"><input type="text" id="search" name="name" value="Search" size="15" maxlength="60"><a class="advSearch" type="button" data-toggle="modal" data-target="#advSearch">Advanced Search</a></div>
+	</div>
+
+	<!-- DROPDOWN TEST  
+	<div id="mobileToggle" class="btn btn-primary menuCollapse" role="button" data-toggle="collapse" href="#menuContainer" aria-expanded="false" aria-controls="menuContainer"><img src="img/buttons/menuarrowup.png" /></div>-->
+	<div  id="menuContainer" class="container collapse width navbar-collapse">
+		
+			<ul class="menuMain nav navbar-nav"> 
+			<li class="dropdown"><a id="browseMenu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse By <span class="caret"></span> </a> 
+				<ul class="dropdown-menu" aria-labelledby="drop1"> 
+					<li><a href="#">Company</a></li> 
+					<li><a href="#">Franchise</a></li> 
+					<li><a href="#">Products</a></li> 
+					<li><a href="#">IFU</a></li> 
+				</ul> 
+			</li> 
+			<li class="dropdown"> <a id="listsMenu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Lists <span class="caret"></span> </a> 
+				<ul class="dropdown-menu" aria-labelledby="drop2"> 
+					<li><a href="#">Viewed</a></li> 
+					<li><a href="#">Favorites</a></li> 
+					<li><a href="#">Saved</a></li> 
+					<li><a href="#">Printed</a></li> 
+				</ul> 
+			</li>
+			<li>Recently Published</li>
+			<li><button type="button" class="signIn" data-toggle="modal" data-target="#signInModal">Sign In <img src="img/buttons/signin.png" /></li>
+		</ul>
+	</div>
+</div>
+<div id="mainBody" class="container">
+	<div class="contBlock col-lg-12">
+		<h1 class="headTitle">Welcome</h1>
+		<p>Lorem ipsum dolor sit amet, velit sapien neque, tellus sit habitasse, lorem tincidunt sed. Mi feugiat, rutrum tristique nihil, fames vestibulum corrupti. Purus amet sem. Sed taciti lacus. Risus phasellus, vestibulum maecenas. Et vel adipisicing. Eget mauris, quis id libero, est risus. Non ut fusce, aliquam vehicula. Purus risus vestibulum.</p>
+		<p>Eget iaculis suspendisse, ut aliquet, tortor metus malesuada. Maecenas lobortis, odio justo enim. Nostra nulla. Magna lorem ante, adipiscing urna arcu. Id odio, nostrud vestibulum. Nam vestibulum dolor, convallis litora. Congue eget nullam.</p>
+	</div>
+	<div class="contBlock col-lg-12">
+		<h1 class="headTitle">My Collection</h1>
+		<ul id="myCollection">
+			<li>
+				<a class="colBlock" src="#">
+					<div class="colIcon col-lg-2"><img src="img/buttons/defaultCollection.png" /></div>
+					<h2>My IFUs</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </p>
+				</a>
+			</li>
+			<li>
+				<a class="colBlock" src="#">
+					<div class="colIcon col-lg-2"><img src="img/buttons/mylabels.png" /></div>
+					<h2>My Labels</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </p>
+				</a>
+			</li>
+			<li>
+				<a class="colBlock" src="#">
+					<div class="colIcon col-lg-2"><img src="img/buttons/mymanuals.png" /></div>
+					<h2>My Manuals</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="footer" class="container">
+	<div id="footerPanel" class="container">
+		<div class="col-sm-12 col-md-3 col-lg-3">
+			<ul class="menuFoot">
+				<li>Become a publisher</li>
+				<li>Tour</li>
+				<li>Site Home</li>
+				<li>Advanced Search</li>
+				<li>Tutorial</li>
+				<li>Geographical Disclaimer</li>
+			</ul>
+		</div>
+		<div class="col-sm-12 col-md-2 col-lg-2">
+			<ul class="menuFoot">
+				<li>Site Privacy</li>
+				<li>Terms &amp; Conditions</li>
+				<li>Legal Notice</li>
+				<li>Safe Harbor Privacy Policy</li>
+			</ul>
+		</div>
+		<div class="col-sm-12 col-md-2 col-lg-2">
+			<ul class="menuFoot">
+				<li>Business</li>
+				<li>Our Team</li>
+				<li>News</li>
+				<li>Jobs</li>
+			</ul>
+		</div>
+		<div class="col-sm-12 col-md-2 col-lg-2">
+			<ul class="menuFoot">
+				<li>Referrals</li>
+				<li>Publishers</li>
+				<li>Partners</li>
+			</ul>
+		</div>
+		<div class="col-sm-12 col-md-3 col-lg-3">
+			<ul class="menuFoot">
+				<li>
+					<div class="form-group">
+						<label for="lang"></label>
+						<select class="form-control" id="lang">
+							<option>English</option>
+					    	<option>espanol</option>
+						    <option>francais</option>
+						    <option>italiano</option>
+						</select>
+					</div>
+				</li>
+				<li>Help</li>
+				<li>Contact Info</li>
+				<li>Request Paper Copies</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footerCopy" class="col-lg-12">
+		<div class="privacy col-xs-12 col-sm-3">Site Privacy</div>
+		<div class="legal col-xs-12 col-sm-3">Legal Notice</div>
+		<div class="copy col-xs-12 col-sm-6">Copyright &copy; enLabel Global Services, 2006-2016</div>
+	</div>
+</div>
+</html>
