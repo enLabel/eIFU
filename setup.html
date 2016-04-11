@@ -1,0 +1,259 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="formBody" class="container">
+	<div id="header">
+		<div id="menuContainer" class="collapse">
+			<ul class="menuMain">
+				<li class="col-xs-12 col-sm-2  col-lg-2">Saved</li>
+				<li class="col-xs-12 col-sm-2 col-lg-2">Viewed</li>
+				<li class="col-xs-12 col-sm-2 col-lg-2">Favorites</li>
+				<li class="col-xs-12 col-sm-2 col-lg-2">Printed</li>
+				<li class="col-xs-12 col-sm-2 col-lg-2">Recently Published</li>
+			<li class="col-xs-12 col-sm-2 col-lg-2"><input type="button" id="logIn" value="Sign In"></li>
+			</ul>
+			<!--	<div id="signIn"><input type="button" id="logIn" value="Sign In"></div> -->
+		</div>		
+		<div id="menuDropdown" class="btn btn-primary menuCollapse" role="button" data-toggle="collapse" href="#menuContainer" aria-expanded="false" aria-controls="menuContainer" onclick="topMenuRotate()"><img id="topMenu" src="img/buttons/menuarrowdown.png" /></div>
+	</div>
+	<div class="clear"></div>
+	<div id="docheaderdiv" class="row">
+		<a class="backbtn"><img src="img/back.png">Back</a>
+		<div id="logo"><img src="img/eIFU_logo.png"></div>
+		<div id="search"><input type="text" id="search" name="name" value="Search" size="15" maxlength="60"></div>
+	</div>
+	<div id="mainbody" class="container">
+		<div class="container col-lg-12 col-md-12">
+			<div id="tidnotax0" class="row">
+				<div id="setupTop" class="docTitle col-lg-12">
+				</div>
+<!--				<div class="setupBtn"><input type="button" id="settingsBtn" value="Account Settings"></div>
+				<div class="setupBtn"><input type="button" id="storageBtn" value="Storage"></div>
+				
+				<div class="clear"></div>
+-->
+				<ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#accSettings" aria-controls="accSettings" role="tab" data-toggle="tab">Account Settings</a></li>
+				    <li role="presentation"><a href="#storage" aria-controls="storage" role="tab" data-toggle="tab">Storage</a></li>
+				</ul>
+
+				<div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active" id="accSettings">
+				    	<div class="setupPage">
+					<div id="setupBlock" class="col-lg-4 col-md-4">
+						<div class="setCont">
+							<div class="setupCont first">Total Storage</div>
+							<div class="setupCont">
+								Set my language to
+								<div class="form-group">
+								  <label for="lang"></label>
+								  <select class="form-control" id="lang">
+								    <option>English</option>
+								    <option>espanol</option>
+								    <option>francais</option>
+								    <option>italiano</option>
+								  </select>
+								</div>
+							</div>
+							<div class="setupCont">
+							Country
+							<div class="form-group">
+								  <label for="lang"></label>
+								  <select class="form-control" id="lang">
+								    <option>English</option>
+								    <option>espanol</option>
+								    <option>francais</option>
+								    <option>italiano</option>
+								  </select>
+								</div>
+							</div>
+							<div class="setupCont">
+							Landing Page
+							<div class="form-group">
+								<label for="lang"></label>
+								<select class="form-control" id="lang">
+									<option>English</option>
+								    <option>espanol</option>
+								    <option>francais</option>
+								    <option>italiano</option>
+								</select>
+							</div>
+							</div>
+							<div class="setupCont">
+								Set background color theme
+								<div class="form-group">
+									<label for="lang"></label>
+									<select class="form-control" id="lang">
+									    <option>English</option>
+									    <option>espanol</option>
+									    <option>francais</option>
+									    <option>italiano</option>
+								  	</select>
+								</div>
+							</div>
+							<div class="setupCont last">
+								Show my history for
+								<div class="form-group">
+									<label for="lang"></label>
+									<select class="form-control" id="lang">
+									    <option>English</option>
+									    <option>espanol</option>
+									    <option>francais</option>
+									    <option>italiano</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+					</div>
+				    <div role="tabpanel" class="tab-pane" id="storage">
+				    	<div class="setupPage">
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+									</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="subCont">
+									<div class="setupCont first">Subscription</div>
+									<div class="storageSelection"></div>
+								</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+								</div>
+							</div>
+						</div>
+				    </div>
+				</div>
+<!--				<div class="setupPage">
+					<div id="setupBlock" class="col-lg-4 col-md-4">
+						<div class="setCont">
+							<div class="setupCont first">Total Storage</div>
+							<div class="setupCont">
+								Set my language to
+								<div class="form-group">
+								  <label for="lang"></label>
+								  <select class="form-control" id="lang">
+								    <option>English</option>
+								    <option>espanol</option>
+								    <option>francais</option>
+								    <option>italiano</option>
+								  </select>
+								</div>
+							</div>
+							<div class="setupCont">
+							Country
+							<div class="form-group">
+								  <label for="lang"></label>
+								  <select class="form-control" id="lang">
+								    <option>English</option>
+								    <option>espanol</option>
+								    <option>francais</option>
+								    <option>italiano</option>
+								  </select>
+								</div>
+							</div>
+							<div class="setupCont">
+							Landing Page
+							<div class="form-group">
+								<label for="lang"></label>
+								<select class="form-control" id="lang">
+									<option>English</option>
+								    <option>espanol</option>
+								    <option>francais</option>
+								    <option>italiano</option>
+								</select>
+							</div>
+							</div>
+							<div class="setupCont">
+								Set background color theme
+								<div class="form-group">
+									<label for="lang"></label>
+									<select class="form-control" id="lang">
+									    <option>English</option>
+									    <option>espanol</option>
+									    <option>francais</option>
+									    <option>italiano</option>
+								  	</select>
+								</div>
+							</div>
+							<div class="setupCont last">
+								Show my history for
+								<div class="form-group">
+									<label for="lang"></label>
+									<select class="form-control" id="lang">
+									    <option>English</option>
+									    <option>espanol</option>
+									    <option>francais</option>
+									    <option>italiano</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="setupBlock" class="col-lg-4 col-md-4">
+						<div class="subCont">
+							<div class="setupCont first">Subscription</div>
+							<div class="storageSelection"></div>
+						</div>
+					</div>
+					<div id="setupBlock" class="col-lg-4 col-md-4">
+						<div class="setCont">
+							<div class="setupCont first">Transaction History</div>
+							<div class="setupCont">adfgadfghdfsds</div>
+							<div class="setupCont">adfgadfghdfsds</div>
+							<div class="setupCont">adfgadfghdfsds</div>
+							<div class="setupCont">adfgadfghdfsds</div>
+							<div class="setupCont last">adfgadfghdfsds</div>
+						</div>
+					</div>
+				</div>  -->
+			</div>
+		</div>
+	</div>	
+	<div class="clear"></div>
+	<div id="footer" class="container">
+		<div id="footerDropdown" class="btn btn-primary menuCollapse" role="button" data-toggle="collapse" href="#footerPanel" aria-expanded="false" aria-controls="footerPanel" onclick="menuRotate()"><img id="botttomMenu" src="img/buttons/menuarrowup.png" /><br>
+			<div class="privacy col-xs-12 col-sm-3">Site Privacy</div>
+			<div class="legal col-xs-12 col-sm-3">Legal Notice</div>
+			<div class="copy col-xs-12 col-sm-6">Copyright &copy; enLabel Global Services, 2006-2016</div>
+		</div>	
+		<div id="footerPanel" class="container collapse">
+			<div id="fpanel1" class="col-xs-12 col-sm-4 col-lg-4">
+				<ul class="menuFoot first">
+					<li><h3>eIFU</h3></li>
+					<li><a href="#">Tour</a></li>
+					<li><a href="#">Site Home</a></li>
+					<li><a href="#">Tutorial</a></li>
+					<li><a href="#">Geographical Disclaimer</a></li>
+				</ul>
+			</div>
+		<div id="fpanel2" class="col-xs-12 col-sm-4 col-lg-4">
+			<ul class="menuFoot">
+				<li><h3>Site Information</h3></li>
+				<li><a href="#">Site Privacy</a></li>
+				<li><a href="#">Terms &amp; Conditions</a></li>
+				<li><a href="#">Legal Notice</a></li>
+				<li><a href="#">Safe Harbor Privacy Policy</a></li>
+			</ul>
+		</div>
+		<div id="fpanel3" class="col-xs-12 col-sm-4  col-lg-4">
+			<ul class="menuFoot last">
+				<li><h3>Support</h3></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Contact Information</a></li>
+				<li><a href="#">Request Paper Copies</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/eifuMain.js"></script>
+</body>
+</html>
