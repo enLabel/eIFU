@@ -6,7 +6,6 @@
 
 div#mainbody {
     max-width: 1200px;
-    margin-bottom: 50px;
 }
 
 /* div#header {
@@ -36,6 +35,12 @@ div#mainbody {
     margin-top: auto;
 }
 
+div#footerDropdown {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+}
+
 /* .menuCollapse.collapsed, .menuCollapse.collapsed:hover, div#footerDropdown.collapsed:hover, div#menuDropdown.collapsed:hover {background:none;}
 */
 div#footerDropdown:hover, div#menuDropdown:hover {
@@ -54,10 +59,10 @@ div.menuCollapse img {
 */
 div#menuContainer {
  /*   display: inline-block;  */
-    width: 100%;
+    width: 85%;
     float: left;
-    background: rgba(256,256,256,.8);
-    padding-top: 25px;
+    background: rgba(256,256,256,.95);
+/*    padding-top: 25px;  */
 }
 
 div#menuDropdown.menuCollapse.collapsed img {
@@ -75,15 +80,28 @@ div#footerDropdown.menuCollapse.collapsed img {
 ul.menuMain {
     float: left;
     width: 100%;
+    padding-left: 0;
+    font-weight: 600;
 }
 
 ul.menuMain li {
     display: inline-block;
     margin: 5px 0 5px 0;
+    padding-left: 10px;
+    text-align: center;
 }
 
 div#signIn, #logIn {
     float: right;
+    margin-top: 25px;
+}
+
+div#signIn a {
+    display: block;
+}
+
+div#signIn img {
+    max-height: 25px;
 }
 
 #docheaderdiv{margin-top: 20px;}
@@ -107,7 +125,7 @@ div.rowTitle{
 
 .iconRow {
 	display: inline-block;
-    max-height: 160px;
+    max-height: 140px;
     max-width: 1200px;
     margin: 0;
     width: 100%;
@@ -143,10 +161,67 @@ div.iconRow > ul > li h4 {
 ul.row.sideScroll {
     white-space: nowrap;
     overflow-x: scroll;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    float: left;
 }
 
-#search {float: right;}
-#logo {float: left;}
+a#left-button {
+    float: left;
+    position: absolute;
+    height: 160px;
+    padding-top: 50px;
+    padding-left: 10px;
+    background: rgba(255,255,255,.8);
+    z-index: 999;
+}
+
+a#right-button {
+    float: left;
+    position: absolute;
+    height: 160px;
+    padding-top: 50px;
+    padding-left: 10px;
+    background: rgba(255,255,255,.8);
+    z-index: 999;
+    /* top: 0; */
+    /* right: 0; */
+    vertical-align: top;
+}
+
+li#signIn {
+    white-space: nowrap;
+    float: right;
+}
+
+#searchBar {
+    float: right;
+    margin-top: 20px;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+#logo {
+/*    float: left;  */
+    margin-top: 15px;
+/*    margin-right: 25px;  */
+}
+
+#Title {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+span.JnJ {
+    width: 100%;
+    font-weight: bold;
+    color: #ff0000;
+}
 
 a.backbtn {
     float: left;
@@ -167,7 +242,7 @@ a.backbtn img {
 }
 
 div#footer {
-    position: fixed;
+/*    position: fixed;  */
     bottom: 0;
     left: 0;
     margin: auto;
@@ -176,14 +251,27 @@ div#footer {
 /*    max-width: 992px;  */
     padding-left: 0;
     padding-right: 0;
-    box-shadow: 0 0 10px #ccc;
+/*    box-shadow: 0 0 10px #ccc;  */
 }
 
 .copy, .privacy, .legal {
     color:#3759A4;
     font-size: 11px;
     font-weight: bold;
+}
 
+.copy {
+    text-align: center;
+}
+
+.privacy {
+    float: left;
+    text-align: left;
+}
+
+.legal {
+    float: right;
+    text-align: right;
 }
 
 .clear {
@@ -213,10 +301,6 @@ ul.menuFoot li a {
 ul.menuFoot li a:hover {
     text-decoration: underline;
 }
-
-.privacy {float: left;}
-
-.legal {float: right;}
 
 a.tidyfullbutton{
     background-image:url('../img/fullcombined.png');
@@ -399,6 +483,23 @@ div.setCont, div.subCont {
 /*** MEDIA QUERIES  ***/
 
 @media (max-width: 767px) {
+
+div#menuContainer {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0px;
+    padding: 25px 0 0 25px;
+    box-shadow: 0 0 15px #444;
+}
+
+#logo{text-align: center;}
+
+li#signIn {
+    float: none;
+}
+
 div#footer.container {
     width: 100% !important;
 }
@@ -411,14 +512,21 @@ div.tidytoolbar {
     padding-right: 0;
 }
 
+.iconRow {margin-bottom: 25px;}
+
 div#mainbody {
-    margin-bottom: 75px;
+/*    margin-bottom: 75px;  */
+}
+
+#searchBar {
+    width: 100%;
 }
 
 div#signIn, #logIn {
-    float: none;
+    float: left;
     width: 100%;
     padding-right: 55px;
+    padding-left: 10px;
 }
 
 ul.menuFoot {
@@ -427,11 +535,24 @@ ul.menuFoot {
     padding-bottom: 10px;
 }
 
+ul.menuFoot li h3 {
+    margin-top: 0px;
+}
+
 ul.menuFoot.last {border-bottom: none;}
 
 }
 
 @media (max-width: 970px) {
+
+#searchBar{width: 100%;}
+
+div#menuContainer {
+width: 100%;
+}
+
+.iconRow {margin-bottom: 25px;}
+
 ul.multipageScroll li {
     display: inline-block !important;
     border-left:0;
@@ -453,6 +574,10 @@ div.tidytoolbar {
 }
 
 @media (max-width: 1170px) {
+    #searchBar {
+    width: 100%;
+}
+
 
 div.tidytoolbar {
     margin-bottom:50px;
@@ -472,10 +597,15 @@ div.setupCont div.form-group {
 }
 
 @media (min-width: 970px) {
-    div.tidyscroll {
+
+div#menuContainer {
+    width: 100%;
+}
+
+div.tidyscroll {
     border-left: 0;
     margin-top: 10px;
-    }
+}
 
 div.setupCont div.form-group {
      max-width: 80%;

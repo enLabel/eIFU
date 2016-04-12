@@ -7,8 +7,12 @@
 </head>
 <body>
 <div id="formBody" class="container">
-	<div id="header">
-		<div id="logo"><img src="img/eIFU_logo.png"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<div id="logo" class="col-lg-2 col-md-2 col-sm-2 col-xs-12"><img src="img/eIFU_logo.png"></div>
+		<div id="Title" class="col-lg-7 col-md-7 col-sm-10 col-xs-12"><span class="JnJ">Johnson &amp; Johnson</span> Health Care Systems Inc. eIFU Site</div>
+		<div id="search" class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><input type="text" id="searchBar" name="name" value="Search" size="15" maxlength="60"></div>
+		</div>
 		<div id="menuContainer">
 			<ul class="menuMain">
 				<li class="col-xs-12 col-sm-2  col-lg-2">Saved</li>
@@ -16,16 +20,11 @@
 				<li class="col-xs-12 col-sm-2 col-lg-2">Favorites</li>
 				<li class="col-xs-12 col-sm-2 col-lg-2">Printed</li>
 				<li class="col-xs-12 col-sm-2 col-lg-2">Recently Published</li>
-			<li class="col-xs-12 col-sm-2 col-lg-2"><input type="button" id="logIn" value="Sign In"></li>
-			</ul>
+				<li id="signIn" class="col-xs-12 col-sm-2 col-lg-2"><a href="#">Sign In <img src="img/signin.png" /></a></li>
 			<!--	<div id="signIn"><input type="button" id="logIn" value="Sign In"></div> -->
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div id="docheaderdiv" class="row">
-		
-		<div id="search"><input type="text" id="search" name="name" value="Search" size="15" maxlength="60"></div>
-	</div>
 	<div id="mainbody" class="container">
 		<div class="rowTitle">Browse By</div>
 		<div id="browseBy" class="iconRow">
@@ -42,8 +41,9 @@
 			</ul>
 		</div>
 		<div class="rowTitle">My Collections</div>
-		<div id="collections" class="iconRow">
-			<ul class="row sideScroll">
+		<div class="iconRow">
+	<!--		<a href="#" id="left-button"><img src="img/left-button.png" /></a>     -->
+			<ul id="collections" class="row sideScroll">
 				<li><img src="img/buttons/defaultCollection.png" />
 					<h4>My IFUs</h4>
 				</li>
@@ -57,6 +57,7 @@
 					<h4>My Packages</h4>
 				</li>
 			</ul>
+	<!--		<a href="#" id="right-button"><img src="img/right-button.png" /></a>		-->
 		</div>
 		<div class="rowTitle">User Information</div>
 		<div id="userInfo" class="iconRow">
@@ -68,10 +69,8 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div id="footer" class="container">
-		<div id="footerDropdown" class="btn btn-primary menuCollapse" role="button" data-toggle="collapse" href="#footerPanel" aria-expanded="false" aria-controls="footerPanel" onclick="menuRotate()"><img id="botttomMenu" src="img/buttons/menuarrowup.png" /><br>
-			<div class="privacy col-xs-12 col-sm-3">Site Privacy</div><div class="legal col-xs-12 col-sm-3">Legal Notice</div><div class="copy col-xs-12 col-sm-6">Copyright &copy; enLabel Global Services, 2006-2016</div></div>	
-		<div id="footerPanel" class="container collapse">
+	<div id="footer" class="container">		
+		<div id="footerPanel">
 			<div id="fpanel1" class="col-xs-12 col-sm-4 col-lg-4">
 				<ul class="menuFoot first">
 					<li><h3>eIFU</h3></li>
@@ -99,7 +98,12 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+		<div id="footerDropdown">
+			<div class="privacy col-xs-12 col-sm-3">Site Privacy</div>
+			<div class="legal col-xs-12 col-sm-3">Legal Notice</div>
+			<div class="copy col-xs-12 col-sm-6">Copyright &copy; enLabel Global Services, 2006-2016</div>
+		</div>
+	</div>	
 </div>
 <script src="js/eifuMain.js"></script>
 </body>

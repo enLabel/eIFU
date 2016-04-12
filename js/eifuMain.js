@@ -14,4 +14,16 @@ function menuRotate() {
 			    document.getElementById("botttomMenu").style.transform = "rotate(180deg)"; 
 			} 
 
-			botttomMenu
+$('#right-button').click(function() {
+      event.preventDefault();
+      $('#collections').animate({
+        marginLeft: "-=200px"
+      }, "fast");
+   });
+
+$('#left-button').click(function() {
+      event.preventDefault();
+      $('#collections').animate({
+        marginLeft: "+=200px"
+      }, "fast");
+   });
