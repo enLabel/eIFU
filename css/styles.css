@@ -9,17 +9,17 @@ div#mainbody {
     margin-bottom: 50px;
 }
 
-div#header {
+/* div#header {
     position: fixed;
     top: 0;
     left: 0;
     margin: auto;
-/*    background: rgba(256,256,256,.8);  */
+    background: rgba(256,256,256,.8);
     width: 100%;
-/*    max-width: 992px;  */
+    max-width: 992px;  
     z-index: 10;
     box-shadow: 0 0 10px #ccc;
-}
+}   */
 
 .headRow {
 	display: inline-block;
