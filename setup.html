@@ -7,27 +7,32 @@
 </head>
 <body>
 <div id="formBody" class="container">
-	<div id="header">
-		<div id="menuContainer" class="collapse">
+	<div id="header" class="container">
+		<div class="row">
+			<div id="logo" class="col-lg-2 col-md-2 col-sm-2 col-xs-12"><img src="img/Home.png" class="homeBtn"><!--<img src="img/eIFU_logo.png">--></div>
+		<div id="Title" class="col-lg-7 col-md-7 col-sm-10 col-xs-12"><span class="JnJ">Johnson &amp; Johnson</span> Health Care Systems Inc. eIFU Site</div>
+		<div id="search" class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><input type="text" id="searchBar" name="name" value="Search" size="15" maxlength="255">
+		<input type="submit" id="searchSubmit" class="form-submit" name="op"></div>
+		</div>
+		<a id="nav-toggle" href="#"><span></span></a>
+		<div id="menuContainer">
 			<ul class="menuMain">
 				<li class="col-xs-12 col-sm-2  col-lg-2">Saved</li>
 				<li class="col-xs-12 col-sm-2 col-lg-2">Viewed</li>
 				<li class="col-xs-12 col-sm-2 col-lg-2">Favorites</li>
 				<li class="col-xs-12 col-sm-2 col-lg-2">Printed</li>
-				<li class="col-xs-12 col-sm-2 col-lg-2">Recently Published</li>
-			<li class="col-xs-12 col-sm-2 col-lg-2"><input type="button" id="logIn" value="Sign In"></li>
-			</ul>
+				<li class="col-xs-12 col-sm-3 col-lg-3">Recently Published</li>
+			<!--	<li id="signIn" class="col-xs-12 col-sm-2 col-lg-2"><a href="#">Sign In <img src="img/signin.png" /></a></li>  -->
 			<!--	<div id="signIn"><input type="button" id="logIn" value="Sign In"></div> -->
-		</div>		
-		<div id="menuDropdown" class="btn btn-primary menuCollapse" role="button" data-toggle="collapse" href="#menuContainer" aria-expanded="false" aria-controls="menuContainer" onclick="topMenuRotate()"><img id="topMenu" src="img/buttons/menuarrowdown.png" /></div>
+		</div>
 	</div>
 	<div class="clear"></div>
-	<div id="docheaderdiv" class="row">
+<!--	<div id="docheaderdiv" class="row">
 		<a class="backbtn"><img src="img/back.png">Back</a>
 		<div id="logo"><img src="img/eIFU_logo.png"></div>
 		<div id="search"><input type="text" id="search" name="name" value="Search" size="15" maxlength="60"></div>
 	</div>
-	<div id="mainbody" class="container">
+-->	<div id="mainbody" class="container">
 		<div class="container col-lg-12 col-md-12">
 			<div id="tidnotax0" class="row">
 				<div id="setupTop" class="docTitle col-lg-12">
@@ -40,6 +45,10 @@
 				<ul class="nav nav-tabs" role="tablist">
 				    <li role="presentation" class="active"><a href="#accSettings" aria-controls="accSettings" role="tab" data-toggle="tab">Account Settings</a></li>
 				    <li role="presentation"><a href="#storage" aria-controls="storage" role="tab" data-toggle="tab">Storage</a></li>
+				    <li role="presentation"><a href="#transHist" aria-controls="transHist" role="tab" data-toggle="tab">Transaction History</a></li>
+				    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+				    <li role="presentation"><a href="#payment" aria-controls="payment" role="tab" data-toggle="tab">Payment</a></li>
+				    <li role="presentation"><a href="#mindFold" aria-controls="mindFold" role="tab" data-toggle="tab">Mind fold</a></li>
 				</ul>
 
 				<div class="tab-content">
@@ -122,6 +131,86 @@
 							<div id="setupBlock" class="col-lg-4 col-md-4">
 								<div class="subCont">
 									<div class="setupCont first">Subscription</div>
+									<div class="storageSelection"></div>
+								</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+								</div>
+							</div>
+						</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="transHist">
+				    	<div class="setupPage">
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+									</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="subCont">
+									<div class="setupCont first">Transaction History</div>
+									<div class="storageSelection"></div>
+								</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+								</div>
+							</div>
+						</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="settings">
+				    	<div class="setupPage">
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+									</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="subCont">
+									<div class="setupCont first">Settings</div>
+									<div class="storageSelection"></div>
+								</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+								</div>
+							</div>
+						</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="payment">
+				    	<div class="setupPage">
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+									</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="subCont">
+									<div class="setupCont first">Payment</div>
+									<div class="storageSelection"></div>
+								</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+								</div>
+							</div>
+						</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="mindFold">
+				    	<div class="setupPage">
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="setCont">
+									
+									</div>
+							</div>
+							<div id="setupBlock" class="col-lg-4 col-md-4">
+								<div class="subCont">
+									<div class="setupCont first">MindFold</div>
 									<div class="storageSelection"></div>
 								</div>
 							</div>
@@ -220,13 +309,9 @@
 		</div>
 	</div>	
 	<div class="clear"></div>
-	<div id="footer" class="container">
-		<div id="footerDropdown" class="btn btn-primary menuCollapse" role="button" data-toggle="collapse" href="#footerPanel" aria-expanded="false" aria-controls="footerPanel" onclick="menuRotate()"><img id="botttomMenu" src="img/buttons/menuarrowup.png" /><br>
-			<div class="privacy col-xs-12 col-sm-3">Site Privacy</div>
-			<div class="legal col-xs-12 col-sm-3">Legal Notice</div>
-			<div class="copy col-xs-12 col-sm-6">Copyright &copy; enLabel Global Services, 2006-2016</div>
-		</div>	
-		<div id="footerPanel" class="container collapse">
+	<div id="setupSubmit"><input type="button" id="done" value="Done"><input type="button" id="update" value="Update &amp; Save"></div>
+	<div id="footer" class="container">		
+		<div id="footerPanel">
 			<div id="fpanel1" class="col-xs-12 col-sm-4 col-lg-4">
 				<ul class="menuFoot first">
 					<li><h3>eIFU</h3></li>
@@ -236,24 +321,31 @@
 					<li><a href="#">Geographical Disclaimer</a></li>
 				</ul>
 			</div>
-		<div id="fpanel2" class="col-xs-12 col-sm-4 col-lg-4">
-			<ul class="menuFoot">
-				<li><h3>Site Information</h3></li>
-				<li><a href="#">Site Privacy</a></li>
-				<li><a href="#">Terms &amp; Conditions</a></li>
-				<li><a href="#">Legal Notice</a></li>
-				<li><a href="#">Safe Harbor Privacy Policy</a></li>
-			</ul>
+			<div id="fpanel2" class="col-xs-12 col-sm-4 col-lg-4">
+				<ul class="menuFoot">
+					<li><h3>Site Information</h3></li>
+					<li><a href="#">Site Privacy</a></li>
+					<li><a href="#">Terms &amp; Conditions</a></li>
+					<li><a href="#">Legal Notice</a></li>
+					<li><a href="#">Safe Harbor Privacy Policy</a></li>
+				</ul>
+			</div>
+			<div id="fpanel3" class="col-xs-12 col-sm-4  col-lg-4">
+				<ul class="menuFoot last">
+					<li><h3>Support</h3></li>
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Contact Information</a></li>
+					<li><a href="#">Request Paper Copies</a></li>
+				</ul>
+			</div>
 		</div>
-		<div id="fpanel3" class="col-xs-12 col-sm-4  col-lg-4">
-			<ul class="menuFoot last">
-				<li><h3>Support</h3></li>
-				<li><a href="#">Help</a></li>
-				<li><a href="#">Contact Information</a></li>
-				<li><a href="#">Request Paper Copies</a></li>
-			</ul>
+		<div id="footerDropdown">
+			<div class="privacy col-xs-12 col-sm-3">Site Privacy</div>
+			<div class="legal col-xs-12 col-sm-3">Legal Notice</div>
+			<div class="copy col-xs-12 col-sm-6">&copy;enLabel Global Services, Inc. 2016<br>
+				Content &copy; Johnson &amp; Johnson Health Care Systems Inc.</div>
 		</div>
-	</div>
+	</div>	
 	<script src="js/eifuMain.js"></script>
 </body>
 </html>

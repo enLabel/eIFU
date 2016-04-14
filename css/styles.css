@@ -125,7 +125,7 @@ div.rowTitle{
 
 .iconRow {
 	display: inline-block;
-    max-height: 140px;
+    max-height: 160px;
     max-width: 1200px;
     margin: 0;
     width: 100%;
@@ -229,13 +229,18 @@ input.form-submit {
     margin: 0;
     font-size: 0;
     color: transparent;
-    background-color: rgba(95,151,207,0.95);
+/*    background-color: rgba(95,151,207,0.95);  */
+    background-color: #B41601;
 }
 
 #logo {
 /*    float: left;  */
     margin-top: 15px;
 /*    margin-right: 25px;  */
+}
+
+img.homeBtn {
+    max-width: 75px;
 }
 
 #Title {
@@ -285,21 +290,21 @@ div#footer {
     color:#3759A4;
     font-size: 11px;
     font-weight: bold;
-    text-align: center;
+
 }
 
 .copy {
-/*    text-align: center;  */
+    text-align: center;  
 }
 
 .privacy {
     float: left;
-/*    text-align: left;  */
+    text-align: left;  
 }
 
 .legal {
     float: right;
-/*    text-align: right; */
+    text-align: right; 
 }
 
 .clear {
@@ -334,6 +339,14 @@ a.tidyfullbutton{
     background-image:url('../img/fullcombined.png');
 }
 
+a.tidyzoominbutton{
+    background-image:url('../img/zoomincombined.png');
+}
+
+a.tidyzoomoutbutton{
+    background-image:url('../img/zoomoutbuttoncombined.png');
+}
+
 a.tidyheartbutton, a.tidysharebutton {float:left;}
 
 a.tidyfullbutton, a.tidyzoominbutton, a.tidyzoomoutbutton {
@@ -350,25 +363,17 @@ div.tidymessage {
     left: 135px;
     position: absolute;
     text-align: center;
-    width: 330px;
+    width: 50%;
     float: left;
 }
 
-.docTitle {
-/*    margin-bottom: 15px;   */
-    border-bottom: 2px solid #B41601;
-}
-
-div.DocInfo {
-    margin-top: 10px;   
-}
-
-div.DocInfo p {
-    padding-left: 10px;
-}
 
 div.tidytoolbar {
     padding-right: 0;
+}
+
+div#tidytoolbar0 a {
+    margin-right: 5px;
 }
 
 div#PdfPage {
@@ -536,7 +541,7 @@ div.setCont, div.subCont {
     background-image: linear-gradient(to bottom, #E6E6E6, #CCCCCC);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#E6E6E6, endColorstr=#CCCCCC);
 }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, input#update, input#done {
     color:#fff;
     display: block;
     border: 1px solid #B41601;
@@ -550,6 +555,45 @@ div.setCont, div.subCont {
     background-image: linear-gradient(to bottom, #B41601, #d20202);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#B41601, endColorstr=#d20202);
 }
 
+/***  DOC INFO  ***/
+
+h2.infoTitle {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-decoration: underline;
+}
+
+.docTitle {
+/*    margin-bottom: 15px;  */
+    border-bottom: 2px solid #B41601;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+div.DocInfo {
+    margin-top: 10px;   
+}
+
+div.DocInfo p {
+    padding-left: 10px;
+}
+
+.docInfoCont {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+div#setupSubmit {
+    margin-bottom: 25px;
+}
+
+div#setupSubmit input {
+    float: right;
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 30px;
+}
 
 /*** MEDIA QUERIES  ***/
 
@@ -583,9 +627,6 @@ div#menuContainer {
   height: 100%;
 
 }
-/* #div#menuContainer.active:before, div#menuContainer.active:after {
-  top: 0 !important;
-}  */
 
 div#menuContainer.active {
   top: 0;
@@ -638,7 +679,11 @@ ul.menuFoot li h3 {
 
 ul.menuFoot.last {border-bottom: none;}
 
+.privacy, .legal {text-align: center;}
+
 }
+
+
 
 @media (max-width: 970px) {
 
@@ -650,14 +695,25 @@ width: 100%;
 
 .iconRow {margin-bottom: 25px;}
 
+div#PdfPage  {
+    margin-top: 50px;
+    height: auto;
+}
+
+ul.multipageScroll {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    height: 100%;
+    max-height: 120px;
+    white-space: nowrap;
+}
+
 ul.multipageScroll li {
     display: inline-block !important;
     border-left:0;
 }
 
-div#PdfPage {
-    margin-top: 50px;
-}
 
 div.tidytoolbar {
     margin-bottom:50px;
@@ -667,6 +723,8 @@ div.tidytoolbar {
     border-left: 0;
     margin-top: 10px;
     border-top: 1px solid #000;
+    height: 150px;
+    overflow-x: scroll;
     }
 }
 
@@ -686,6 +744,7 @@ div.tidytoolbar {
 
 ul.multipageScroll li {
     display: inline-block !important;
+    padding: 0 10px;
     }
 
 div.setCont {
@@ -705,7 +764,9 @@ div#menuContainer {
 
 div.tidyscroll {
     border-left: 0;
-    margin-top: 10px;
+    margin-top: 0;
+    overflow-y: scroll;
+    border-left: 1px solid #000;
 }
 
 div.setupCont div.form-group {
@@ -722,6 +783,15 @@ div.setupCont div.form-group {
 @media (min-width: 768px) and (max-width: 991px) {
     div.setupCont.first {
     top: -10;
+}
+
+ul.multipageScroll {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    height: 100%;
+    max-height: 120px;
+    white-space: nowrap;
 }
 
 }
