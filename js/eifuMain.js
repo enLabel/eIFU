@@ -27,3 +27,13 @@ $('#left-button').click(function() {
         marginLeft: "+=200px"
       }, "fast");
    });
+
+/* NAV-TOGGLE  */ 
+document.querySelector( "#nav-toggle" )
+  .addEventListener( "click", function() {
+    this.classList.toggle( "active" );
+  });
+
+  $('#nav-toggle').click( function() {
+    $("#menuContainer").toggleClass("active");
+} );
